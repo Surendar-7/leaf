@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management App</title>
+  <link rel="stylesheet" th:href="@{Static/design.css}">
+</head>
+<body>
+<h2 class="title">Student Management App</h2>
+<div class="container">
+  <div class="card">
+    <div class="box1">
+      <h3>Manage Course</h3>
+
+      <a th:href="@{/addCourse}">AddCourse</a>
+      <a href="#"> View Course</a>
+
+    </div>
+
+    <div class="box1">
+      <h3>Manage Student</h3>
+
+      <a href="#"> Add Student</a>
+      <a href="#"> View Student</a>
+
+    </div>
+
+
+    <div class="box2">
+      <h3>Manage Exam</h3>
+
+      <a href="#">Create Exam</a>
+      <a href="#"> View Exam</a>
+
+      <a href="#"> AddExam Result</a>
+      <a href="#"> ViewExam Result</a>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
