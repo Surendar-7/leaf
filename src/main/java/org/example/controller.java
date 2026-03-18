@@ -13,36 +13,45 @@ import java.util.List;
 
 @Controller
 public class controller {
-    List<data> userdata=new ArrayList<>();
+//    List<data> userdata=new ArrayList<>();
 
 
-    List<data> data=new ArrayList<>();
+    List<addcourseEntity> data=new ArrayList<>();
 
 
     @Autowired
-    addcourseEntity addcourseEntity;
+   AddCourseRepo repo;
 
 
     @GetMapping("/managestudent")
 
     public String manage(Model model){
-        model.addAttribute("data", new data());
+        model.addAttribute("addcourseEntity", new addcourseEntity());
         return "managestudent";
     }
 
     @GetMapping("/addcourse")
     public String course(Model model){
-        model.addAttribute("data", new data());
+        model.addAttribute("addcourseEntity", new addcourseEntity());
         return "addcourse";
     }
 
 
 
-    @PostMapping("/savedata")
-    public String save(@ModelAttribute("data")data coursedata) {
-        data.add(coursedata);
+    @PostMapping("/save")
+    public String save(@ModelAttribute("addcourseEntity")addcourseEntity s) {
+
+        data.add(s);
+
+        addcourseEntity ace=new addcourseEntity();
+        ace.setCoursename(s.getCoursename());
+        ace.setCourseyear(s.getCourseyear());
+
+        repo.save(s);
+
         return "demo";
     }
+
 
 
 //    @GetMapping("/addstudent")
