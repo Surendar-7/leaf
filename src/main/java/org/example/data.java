@@ -1,16 +1,27 @@
 package org.example;
 
 import jakarta.persistence.*;
+
 //
 //@Entity
 //@Table(name = "data")
 public class data {
-//    @Id
+    //    @Id
 //    @EmbeddedId
     private String name;
     private String age;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getName() {
+
         return name;
     }
 

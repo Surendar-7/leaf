@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Student Management App</title>
-  <link rel="stylesheet" th:href="@{Static/design.css}">
+  <link rel="stylesheet" href="manage.css">
 </head>
 <body>
 <h2 class="title">Student Management App</h2>
@@ -12,7 +12,7 @@
     <div class="box1">
       <h3>Manage Course</h3>
 
-      <a th:href="@{/addCourse}">AddCourse</a>
+      <a th:href="@{/addcourse}">AddCourse</a>
       <a href="#"> View Course</a>
 
     </div>
@@ -20,7 +20,7 @@
     <div class="box1">
       <h3>Manage Student</h3>
 
-      <a href="#"> Add Student</a>
+      <a th:href="@{/addstudent}"> Add Student</a>
       <a href="#"> View Student</a>
 
     </div>
