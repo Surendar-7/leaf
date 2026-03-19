@@ -11,9 +11,18 @@ public class addcourseEntity {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String Coursename;
     private String Courseyear;
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getCoursename() {
         return Coursename;

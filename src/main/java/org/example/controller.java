@@ -36,16 +36,21 @@ public class controller {
         return "addcourse";
     }
 
+    @GetMapping("/form")
+    public String form(Model model){
+        model.addAttribute("addcourseEntity",new addcourseEntity());
 
+        return "form";
+    }
 
     @PostMapping("/save")
     public String save(@ModelAttribute("addcourseEntity")addcourseEntity s) {
 
-        data.add(s);
-
-        addcourseEntity ace=new addcourseEntity();
-        ace.setCoursename(s.getCoursename());
-        ace.setCourseyear(s.getCourseyear());
+//        data.add(s);
+//
+//        addcourseEntity ace=new addcourseEntity();
+//        ace.setCoursename(s.getCoursename());
+//        ace.setCourseyear(s.getCourseyear());
 
         repo.save(s);
 
