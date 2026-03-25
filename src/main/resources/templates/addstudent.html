@@ -65,20 +65,20 @@
 
     <h2>Add Student</h2>
 
-    <form th:action="@{/save}" th:object="${data}" method="get">
+    <form th:action="@{/AddStudent}" th:object="${AddStuEntity}" method="post">
 
         <label>Student Name</label>
-        <input type="text" name="name" th:field="*{name}" >
+        <input type="text"  th:field="*{studentname}" >
 
-        <label>Email</label>
-        <input type="email" name="email"  th:field="*{email}">
+        <label>CourseYear</label>
+        <input type="text" th:field="*{courseyear}">
 
-        <label>Age</label>
-        <input type="number" name= "age" th:field="*{age}" >
+        <label>CourseName</label>
+        <input type="text"  th:field="*{coursename}" >
 
         <button class="btn" type="submit">Submit</button>
 
-        <a href="/" style="text-decoration:none">
+        <a th:href="@{/managestudent}" style="text-decoration:none">
             <button type="button" class="btn">Home</button>
         </a>
 
