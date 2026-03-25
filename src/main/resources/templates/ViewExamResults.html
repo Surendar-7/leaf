@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ViewExamResults</title>
+</head>
+<body>
+<table>
+
+  <thead>
+  <tr>
+    <th>Exam Name</th>
+    <th>Course Name</th>
+    <th>Course Year</th>
+    <th>Mark</th>
+    <th>Students Name</th>
+  </tr>
+  </thead>
+
+  <tr th:each="aer: ${AddExamResultsEntity}">
+    <td th:text="${aer.examname}"></td>
+    <td th:text="${aer.coursename}"></td>
+    <td th:text="${aer.courseyear}"></td>
+    <td th:text="${aer.mark}"></td>
+    <td th:text="${aer.stuname}"></td>
+  </tr>
+</table>
+</body>
+</html>

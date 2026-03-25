@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ViewStudents</title>
+</head>
+<body>
+<table>
+
+    <thead>
+    <tr>
+        <th>StudentName</th>
+        <th>Course Name</th>
+        <th>Course Year</th>
+    </tr>
+    </thead>
+
+    <tr th:each="as : ${AddStuEntity}">
+        <td th:text="${as.studentname}"></td>
+        <td th:text="${as.coursename}"></td>
+        <td th:text="${as.courseyear}"></td>
+    </tr>
+</table>
+</body>
+</html>

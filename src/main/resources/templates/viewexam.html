@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ViewExam</title>
+</head>
+<body>
+<table>
+
+  <thead>
+  <tr>
+
+    <th>Exam Name</th>
+    <th>Course Name</th>
+    <th>Course Year</th>
+  </tr>
+  </thead>
+  <tr th:each="ce : ${CreateExamEntity}">
+    <td  th:text="${ce.examname}"></td>
+    <td th:text="${ce.courseyear}"></td>
+    <td  th:text="${ce.coursename}"></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
